@@ -22,7 +22,7 @@ class MainActivity : FragmentActivity() {
     private fun handleSearchView(){
         searchView!!.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
-                queryTV!!.text = query
+                queryTV!!.text = "Search results for \"$query\""
                 return false
             }
 
