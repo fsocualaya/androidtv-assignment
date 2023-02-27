@@ -46,7 +46,6 @@ class VideoDetailsFragment : DetailsSupportFragment() {
     private lateinit var mAdapter: ArrayObjectAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d(TAG, "onCreate DetailsFragment")
         super.onCreate(savedInstanceState)
 
         mDetailsBackground = DetailsSupportFragmentBackgroundController(this)

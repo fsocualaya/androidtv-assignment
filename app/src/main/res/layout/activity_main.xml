@@ -63,6 +63,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/credits_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/title_tv" >
-
     </SearchView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
