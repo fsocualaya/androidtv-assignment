@@ -52,11 +52,8 @@ class MainFragment : BrowseSupportFragment() {
         super.onActivityCreated(savedInstanceState)
 
         prepareBackgroundManager()
-
         setupUIElements()
-
         loadRows()
-
         setupEventListeners()
     }
 

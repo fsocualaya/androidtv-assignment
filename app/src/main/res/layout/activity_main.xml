@@ -23,7 +23,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/search_view"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="false"/>
 
     <TextView
         android:id="@+id/credits_tv"
@@ -39,7 +40,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/title_tv"
         app:layout_constraintTop_toBottomOf="@+id/title_tv"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:focusable="false"/>
 
     <TextView
         android:id="@+id/query_tv"
@@ -53,17 +55,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/search_view"
-        app:layout_constraintTop_toBottomOf="@+id/credits_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/credits_tv"
+        android:focusable="false"/>
 
     <SearchView
         android:id="@+id/search_view"
         android:layout_width="548dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
+        android:queryHint="@string/query_hint"
         app:layout_constraintBottom_toBottomOf="@+id/credits_tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/title_tv" >
     </SearchView>
 
+    <FrameLayout
+        android:id="@+id/results_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="364dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/query_tv"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
