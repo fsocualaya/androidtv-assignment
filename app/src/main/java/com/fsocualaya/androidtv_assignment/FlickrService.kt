@@ -54,18 +54,17 @@ class FlickrService {
                 }
                 return photoList
 
-            } else {
             }
         }
         return photoList
     }
 
-    fun getRecentPhotos():ArrayList<Photo>{
+    fun getRecentPhotos(page:Int):ArrayList<Photo>{
         StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.LAX)
         val request = Request.Builder().url(buildURL(
             method="flickr.photos.getRecent",
             text=null,
-            page=1
+            page=page
         )).build()
 
         val photoList : ArrayList<Photo> = arrayListOf()
@@ -87,7 +86,6 @@ class FlickrService {
                 }
                 return photoList
 
-            } else {
             }
         }
         return photoList
